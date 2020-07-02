@@ -24,7 +24,7 @@ Now you need to install and configure postgres:
 sudo apt-get install postgresql    
 sudo apt-get install postgresql-contrib    
 sudo apt-get install libpq-dev    
-sudo initdb -E UTF8    
+/usr/lib/postgresql/10/bin/initdb -E UTF8 ~/postgres       
 
 Then do a whoami to know your current linux operating system ID. If you are running vagrant, it will be vagrant.  Then do: 
  
@@ -38,9 +38,9 @@ brew install postgresql
 
 Then do a whoami to know your current MacOS operating system ID.  Then do 
 
-sudo initdb -E UTF8    
+/usr/lib/postgresql/10/bin/initdb -E UTF8 ~/postgres      
 sudo -u postgres createuser <your MacOS userid> -s    
-sudo service postgresql    
+sudo service postgresql start        
 
 # Git repository setup (both MacOS and Ubuntu) 
 
